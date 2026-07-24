@@ -1,5 +1,5 @@
 import { prisma } from "../../lib/prisma";
-async function main() {
+export const handler = async () => {
   // Create a new user with a post
   await prisma.user.create({
     data: {
@@ -11,12 +11,4 @@ async function main() {
 )
 }  // Fetch all users with their posts
 
-main()
-  .then(async () => {
-    await prisma.$disconnect();
-  })
-  .catch(async (e) => {
-    console.error(e);
-    await prisma.$disconnect();
-    process.exit(1);
-  });
+await prisma.$disconnect()
