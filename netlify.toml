@@ -1,0 +1,5 @@
+[functions]
+  node_bundler = "esbuild"
+  [functions.esbuild]
+    format = "esm"
+    target = "node18"
