@@ -9,7 +9,7 @@ async function main() {
       },
     },
 )
-  // Fetch all users with their posts
+}  // Fetch all users with their posts
 
 main()
   .then(async () => {
@@ -20,4 +20,3 @@ main()
     await prisma.$disconnect();
     process.exit(1);
   });
-}
